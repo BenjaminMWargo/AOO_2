@@ -8,6 +8,7 @@ public class FutureValueCalculator extends Application{
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FutureValueCalculator.fxml"));
         Scene scene = new Scene(root);
+        stage.setTitle("Future Value Calculator");
         stage.setScene(scene);
         stage.show();
 

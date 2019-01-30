@@ -2,13 +2,13 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" type="GridPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="FutureValueCalculatorController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FutureValueCalculatorController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,18 +21,24 @@
       <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField id="txtInvAmount" fx:id="txtInvAmount" GridPane.columnIndex="1" />
+      <TextField id="txtInvAmount" fx:id="txtInvAmount" prefHeight="25.0" prefWidth="75.0" GridPane.columnIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
       <TextField id="txtYears" fx:id="txtYears" prefHeight="13.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <TextField id="txtInterestRate" fx:id="txtInterestRate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField id="txtFuture" fx:id="txtFuture" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Investment Amount" />
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Number of Years" GridPane.rowIndex="1" />
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Annual Interest Rate" GridPane.rowIndex="2" />
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Future Value" GridPane.rowIndex="4" />
       <Button id="buttonCalculate" fx:id="buttonCalculate" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#calculateButtonPressed" text="Calculate" translateX="100.0" GridPane.rowIndex="3">
          <padding>
             <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
          </padding>
       </Button>
+      <Text stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="      Investment Amount     " />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="          Number of Years   " GridPane.rowIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="          Annual Interest Rate     " GridPane.rowIndex="2" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="             Future Value     " GridPane.rowIndex="4" />
    </children>
-</fx:root>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>
